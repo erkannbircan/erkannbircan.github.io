@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GridPilot — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 4rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f; background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: .6rem; margin-bottom: 2rem; }
+  .brand .dot { width: 34px; height: 34px; border-radius: 9px;
+    background: linear-gradient(135deg,#3b6ef5,#8b5cf6); flex: none; }
+  .brand strong { font-size: 1.15rem; letter-spacing: -.01em; }
+  h1 { font-size: 2rem; letter-spacing: -.02em; margin: 0 0 .3rem; }
+  .updated { color: #86868b; font-size: .9rem; margin: 0 0 2rem; }
+  h2 { font-size: 1.25rem; letter-spacing: -.01em; margin: 2.2rem 0 .6rem; }
+  p, li { color: #333; }
+  strong { color: #1d1d1f; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  code { font: .88em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: rgba(0,0,0,.06); padding: .12em .4em; border-radius: 5px; }
+  .lead { font-size: 1.08rem; color: #1d1d1f; border-left: 3px solid #3b6ef5;
+    padding: .1rem 0 .1rem 1rem; }
+  a { color: #3b6ef5; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,.1);
+    color: #86868b; font-size: .85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f5f5f7; background: #000; }
+    p, li { color: #c7c7cc; }
+    strong, .lead, h1, .brand strong { color: #f5f5f7; }
+    code { background: rgba(255,255,255,.12); }
+    footer { border-top-color: rgba(255,255,255,.12); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><span class="dot"></span><strong>GridPilot</strong></div>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 12 July 2026</p>
+
+  <p class="lead">GridPilot is a local-first macOS utility. <strong>We do not run servers, we do
+  not have accounts, and we never transmit your data anywhere.</strong> Everything GridPilot knows
+  stays in local files on your Mac.</p>
+
+  <h2>What GridPilot reads</h2>
+  <p>To move and arrange your windows, GridPilot uses the macOS Accessibility API. It reads:</p>
+  <ul>
+    <li><strong>Window position and size</strong> — to place windows into zones.</li>
+    <li><strong>App identity</strong> (bundle identifier and app name) — to know which app a window
+      belongs to and, for Profiles, which apps to launch.</li>
+    <li><strong>Window titles</strong> — read <strong>only when needed to tell apart multiple
+      windows of the same app</strong> (for example, two Chrome windows) so that Layout Rescue and
+      Profiles restore the right one.</li>
+    <li><strong>URLs you add to a Profile yourself</strong> — stored so a Profile can reopen them.</li>
+  </ul>
+  <p>GridPilot <strong>never</strong> reads the contents of your windows, your screen, your
+  keystrokes, your clipboard, your files, or your browsing history.</p>
+
+  <h2>Where the data lives</h2>
+  <p>All of the above is stored locally under
+  <code>~/Library/Application Support/GridPilot/</code> (profiles, snapshots, settings). It is
+  never uploaded, synced, or shared. Deleting the app, or using <strong>Delete All Saved Workspace
+  Data</strong> in the menu, removes it.</p>
+
+  <h2>Telemetry</h2>
+  <p>GridPilot ships with <strong>no analytics and no telemetry</strong>. If an optional, anonymous
+  usage-metrics feature is ever added, it will be <strong>off by default</strong>, opt-in, and will
+  <strong>never</strong> include window titles, URLs, app identities, or any personal data — only
+  anonymous, aggregate counts.</p>
+
+  <h2>Purchases</h2>
+  <p>Purchases and the free trial are handled entirely by Apple's App Store / StoreKit. GridPilot
+  receives only the entitlement status Apple provides; it never sees your payment details.</p>
+
+  <h2>Your controls</h2>
+  <ul>
+    <li><strong>Delete All Saved Workspace Data</strong> (menu bar → Profiles) erases all saved
+      profiles and snapshots — including the titles and URLs above — immediately and permanently.</li>
+    <li>Revoking Accessibility access in System Settings stops all window reading at once.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="mailto:erkannbircan@gmail.com">erkannbircan@gmail.com</a></p>
+
+  <footer>© 2026 GridPilot · <a href="/support">Support</a></footer>
+</main>
+</body>
+</html>

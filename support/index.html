@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GridPilot — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 4rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f; background: #fff; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: .6rem; margin-bottom: 2rem; }
+  .brand .dot { width: 34px; height: 34px; border-radius: 9px;
+    background: linear-gradient(135deg,#3b6ef5,#8b5cf6); flex: none; }
+  .brand strong { font-size: 1.15rem; letter-spacing: -.01em; }
+  h1 { font-size: 2rem; letter-spacing: -.02em; margin: 0 0 .3rem; }
+  .lead { color: #86868b; font-size: 1.05rem; margin: 0 0 2rem; }
+  .card { border: 1px solid rgba(0,0,0,.1); border-radius: 14px; padding: 1.1rem 1.3rem;
+    margin: 1.5rem 0; background: rgba(0,0,0,.015); }
+  .card h2 { margin: 0 0 1rem; font-size: 1.1rem; }
+  .contact a { color: #3b6ef5; font-weight: 600; text-decoration: none; }
+  details { border-bottom: 1px solid rgba(0,0,0,.08); padding: .85rem 0; }
+  details:last-child { border-bottom: 0; }
+  summary { cursor: pointer; font-weight: 600; color: #1d1d1f; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "＋"; color: #3b6ef5; margin-right: .55rem; font-weight: 700; }
+  details[open] summary::before { content: "－"; }
+  details p { margin: .7rem 0 .2rem; color: #444; }
+  code { font: .88em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: rgba(0,0,0,.06); padding: .12em .4em; border-radius: 5px; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,.1);
+    color: #86868b; font-size: .85rem; }
+  footer a { color: #86868b; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f5f5f7; background: #000; }
+    .lead { color: #98989d; }
+    .card { border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.03); }
+    .card h2, summary, .brand strong, h1 { color: #f5f5f7; }
+    details { border-bottom-color: rgba(255,255,255,.1); }
+    details p { color: #c7c7cc; }
+    code { background: rgba(255,255,255,.12); }
+    footer { border-top-color: rgba(255,255,255,.12); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><span class="dot"></span><strong>GridPilot</strong></div>
+
+  <h1>Support</h1>
+  <p class="lead">Help with GridPilot, the macOS menu-bar window manager.</p>
+
+  <div class="card contact">
+    <h2>Contact us</h2>
+    <p>Email <a href="mailto:erkannbircan@gmail.com">erkannbircan@gmail.com</a> — we usually reply
+    within a couple of business days. Please include your macOS version and a short description of
+    what happened.</p>
+  </div>
+
+  <h2 style="margin-top:2.4rem;font-size:1.3rem;">Frequently asked</h2>
+
+  <details>
+    <summary>GridPilot isn't moving my windows</summary>
+    <p>GridPilot needs Accessibility permission. Open <strong>System Settings → Privacy &amp;
+    Security → Accessibility</strong> and turn on the switch next to GridPilot. If you granted it
+    but nothing happens, quit and reopen GridPilot once so macOS re-reads the permission.</p>
+  </details>
+
+  <details>
+    <summary>What are the keyboard shortcuts?</summary>
+    <p><strong>⌃⌘1–0</strong> snaps the focused window into a zone. <strong>⌃⌘←↑↓→</strong> moves it
+    between zones. <strong>⌃⌘Z</strong> undoes the last move. Profiles can be assigned their own
+    <strong>⌃⌥⌘ + digit</strong> shortcut in the Profile editor.</p>
+  </details>
+
+  <details>
+    <summary>How does the free trial and pricing work?</summary>
+    <p>GridPilot is free for 7 days with every feature unlocked. After that you can continue with a
+    subscription (monthly or yearly) or a one-time Lifetime unlock. Purchases and the trial are
+    handled by Apple; you can manage or cancel any time in <strong>App Store → your account →
+    Subscriptions</strong>.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete my saved data?</summary>
+    <p>Click the GridPilot menu-bar icon → <strong>Profiles → Delete All Saved Workspace Data</strong>.
+    This permanently removes every saved profile and layout snapshot. GridPilot stores everything
+    locally under <code>~/Library/Application Support/GridPilot/</code> and never uploads anything.</p>
+  </details>
+
+  <details>
+    <summary>Does GridPilot read my screen or send data anywhere?</summary>
+    <p>No. GridPilot has no servers, no accounts, and no telemetry. It reads only window position,
+    size, app identity, and — only to tell apart two windows of the same app — their titles. It
+    never reads window contents or keystrokes. See our
+    <a href="/privacy" style="color:#3b6ef5;">Privacy Policy</a>.</p>
+  </details>
+
+  <details>
+    <summary>My external monitor layout got scrambled after unplugging</summary>
+    <p>Use <strong>Layout Rescue</strong>: GridPilot remembers each monitor arrangement and can put
+    every window back. Open the menu-bar icon → <strong>Restore Desktop Snapshot</strong>. Redocking
+    a known monitor also triggers an automatic restore.</p>
+  </details>
+
+  <footer>© 2026 GridPilot · <a href="/privacy">Privacy Policy</a></footer>
+</main>
+</body>
+</html>
