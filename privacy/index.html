@@ -46,14 +46,16 @@
   <div class="brand"><span class="dot"></span><strong>GridPilot</strong></div>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 12 July 2026</p>
+  <p class="updated">Last updated: 17 July 2026</p>
 
   <p class="lead">GridPilot is a local-first macOS utility. <strong>We do not run servers, we do
   not have accounts, and we never transmit your data anywhere.</strong> Everything GridPilot knows
   stays in local files on your Mac.</p>
 
   <h2>What GridPilot reads</h2>
-  <p>To move and arrange your windows, GridPilot uses the macOS Accessibility API. It reads:</p>
+  <p>To move and arrange your windows, GridPilot uses macOS Accessibility and, in the App Store
+    sandbox, the separate user-consented Window Automation service (System Events). These
+    services are used only for window management. GridPilot reads:</p>
   <ul>
     <li><strong>Window position and size</strong> — to place windows into zones.</li>
     <li><strong>App identity</strong> (bundle identifier and app name) — to know which app a window
@@ -87,6 +89,8 @@
     <li><strong>Delete All Saved Workspace Data</strong> (menu bar → Profiles) erases all saved
       profiles and snapshots — including the titles and URLs above — immediately and permanently.</li>
     <li>Revoking Accessibility access in System Settings stops all window reading at once.</li>
+    <li>Revoking GridPilot's System Events access under System Settings → Privacy &amp; Security →
+      Automation stops the App Store build from controlling other apps' windows.</li>
   </ul>
 
   <h2>Contact</h2>
