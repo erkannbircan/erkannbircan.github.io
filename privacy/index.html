@@ -60,10 +60,10 @@
     <li><strong>Window position and size</strong> — to place windows into zones.</li>
     <li><strong>App identity</strong> (bundle identifier and app name) — to know which app a window
       belongs to and, for Profiles, which apps to launch.</li>
-    <li><strong>Window titles</strong> — read <strong>only while saving a Profile or Desktop
-      Snapshot, only when that capture contains multiple windows owned by the same running app,
-      and only for those exact captured windows</strong>. This lets GridPilot restore the correct
-      sibling later. A title is not read for an app with only one captured window.</li>
+    <li><strong>Window titles</strong> — read locally <strong>only while saving a Profile or
+      Desktop Snapshot, or later applying/restoring it, only when the saved group contains
+      multiple windows from the same app and a title is needed to distinguish sibling
+      windows</strong>. Titles are never read for single-window groups.</li>
     <li><strong>URLs you add to a Profile yourself</strong> — stored so a Profile can reopen them.</li>
   </ul>
   <p>GridPilot <strong>never</strong> reads the contents of your windows, your screen, your
