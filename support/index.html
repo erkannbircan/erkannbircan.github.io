@@ -102,10 +102,11 @@
   <details>
     <summary>Does GridPilot read my screen or send data anywhere?</summary>
     <p>No. GridPilot has no servers, no accounts, and no telemetry. It reads window geometry, state,
-    and app identity for local window management. While saving a Profile or Desktop Snapshot, it
-    reads titles only if that capture contains multiple windows from the same running app, and only
-    for those exact captured windows; it does not read a title for a single-window app. It never
-    reads window contents or keystrokes. See our
+    and app identity for local window management. While saving a Profile or Desktop Snapshot, or
+    later applying/restoring it, GridPilot reads window titles locally only when the saved group
+    contains multiple windows from the same app and sibling disambiguation is needed; it never
+    reads titles for single-window groups. It never reads window contents or keystrokes and never
+    transmits workspace data. See our
     <a href="/privacy" style="color:#3b6ef5;">Privacy Policy</a>.</p>
   </details>
 
