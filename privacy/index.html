@@ -46,11 +46,11 @@
   <div class="brand"><span class="dot"></span><strong>GridPilot</strong></div>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 17 July 2026</p>
+  <p class="updated">Last updated: 18 July 2026</p>
 
-  <p class="lead">GridPilot is a local-first macOS utility. <strong>We do not run servers, we do
-  not have accounts, and we never transmit your data anywhere.</strong> Everything GridPilot knows
-  stays in local files on your Mac.</p>
+  <p class="lead">GridPilot is a local-first macOS utility. <strong>We do not run GridPilot
+  servers, we do not have accounts, and we never transmit your workspace data to the developer
+  or any third party.</strong> GridPilot's workspace data stays in local files on your Mac.</p>
 
   <h2>What GridPilot reads</h2>
   <p>To move and arrange your windows, GridPilot uses macOS Accessibility and, in the App Store
@@ -60,19 +60,31 @@
     <li><strong>Window position and size</strong> — to place windows into zones.</li>
     <li><strong>App identity</strong> (bundle identifier and app name) — to know which app a window
       belongs to and, for Profiles, which apps to launch.</li>
-    <li><strong>Window titles</strong> — read <strong>only when needed to tell apart multiple
-      windows of the same app</strong> (for example, two Chrome windows) so that Layout Rescue and
-      Profiles restore the right one.</li>
+    <li><strong>Window titles</strong> — read <strong>only while saving a Profile or Desktop
+      Snapshot, only when that capture contains multiple windows owned by the same running app,
+      and only for those exact captured windows</strong>. This lets GridPilot restore the correct
+      sibling later. A title is not read for an app with only one captured window.</li>
     <li><strong>URLs you add to a Profile yourself</strong> — stored so a Profile can reopen them.</li>
   </ul>
   <p>GridPilot <strong>never</strong> reads the contents of your windows, your screen, your
   keystrokes, your clipboard, your files, or your browsing history.</p>
 
   <h2>Where the data lives</h2>
-  <p>All of the above is stored locally under
-  <code>~/Library/Application Support/GridPilot/</code> (profiles, snapshots, settings). It is
-  never uploaded, synced, or shared. Deleting the app, or using <strong>Delete All Saved Workspace
-  Data</strong> in the menu, removes it.</p>
+  <p>Workspace data is stored in GridPilot's macOS Application Support directory:</p>
+  <ul>
+    <li>App Store build:
+      <code>~/Library/Containers/app.gridpilot.mac/Data/Library/Application Support/GridPilot/</code>
+    </li>
+    <li>Development or other non-sandboxed build:
+      <code>~/Library/Application Support/GridPilot/</code></li>
+  </ul>
+  <p>Profiles and snapshots can contain app identities, window geometry, the limited window
+    titles described above, and Profile URLs. Settings, custom layouts, and local license or
+    entitlement state are stored separately in the same GridPilot directory. None of these files
+    is uploaded, synced, or shared by GridPilot.</p>
+  <p>macOS does not guarantee that moving an app to the Trash will remove its Application Support
+    files. Use the in-app deletion control before uninstalling if you want its saved Profiles and
+    Desktop Snapshots erased.</p>
 
   <h2>Telemetry</h2>
   <p>GridPilot contains <strong>no analytics, telemetry, advertising, tracking SDKs, or tracking
@@ -88,8 +100,10 @@
 
   <h2>Your controls</h2>
   <ul>
-    <li><strong>Delete All Saved Workspace Data</strong> (menu bar → Profiles) erases all saved
-      profiles and snapshots — including the titles and URLs above — immediately and permanently.</li>
+    <li><strong>Delete All Saved Workspace Data</strong> (menu bar → Profiles) immediately and
+      permanently erases saved Profiles and Desktop Snapshots — including the app identities,
+      window geometry, limited titles, and Profile URLs stored in them. It intentionally keeps
+      your custom layouts, preferences, and local license or entitlement state.</li>
     <li>Revoking Accessibility access in System Settings stops all window reading at once.</li>
     <li>Revoking GridPilot's System Events access under System Settings → Privacy &amp; Security →
       Automation stops the App Store build from controlling other apps' windows.</li>
